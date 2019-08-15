@@ -185,6 +185,8 @@ export class SingleItem extends React.Component {
     //e.preventDefault();
     //e.stopPropagation();
 
+    this.removeDisable(); //remove disable attribute from items
+
     //on checkbox isChecked(change), update completedAt with timestamp, else, remove timesamp(set to null)
     if(this.props.group === 'Purchases') {
 
@@ -249,8 +251,6 @@ export class SingleItem extends React.Component {
 
     }
 
-    this.removeDisable(); //remove disable attribute from items
-
   }
 
   removeDisable(e){
@@ -298,8 +298,9 @@ export class SingleItem extends React.Component {
 
                   //set state
                   this.setState(prevState => ({
-                    disabled: true,
-                    completed: true,
+                    disabled: false,
+                    completed: false,
+                    completedAt: '',
                     
                   }));
                 } else {
@@ -310,8 +311,9 @@ export class SingleItem extends React.Component {
 
                   //set state
                   this.setState(prevState => ({
-                    disabled: true,
+                    disabled: false,
                     completed: false,
+                    completedAt: '',
                     
                   }));
 
@@ -324,6 +326,18 @@ export class SingleItem extends React.Component {
                 completed: prevState.completed,
               }));
 
+              if(this.state.itemId === 1){
+                
+                if(completedPurchasesCounter > 1){
+                  completedPurchasesCounter = 0;
+                }
+
+                this.setState(prevState => ({
+                  disabled: false,
+                  completed: prevState.completed,
+                  completedPurchases: completedPurchasesCounter
+                }));
+              }
             }
 
           } else {

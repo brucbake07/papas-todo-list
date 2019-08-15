@@ -376,17 +376,14 @@ export class SingleItem extends React.Component {
 
     if(this.state.completedAt){ //if item has completedAt state
       if(this.state.completedAt !== ''){
-        //let checkComplete = true; //add checkmark
         var completedTaskClass = 'doneTextStyle'; //add class for done text
         var disabledLock = ''; //add class for lock
         
       } else {
-        //var checkComplete = false; //add checkmark
         completedTaskClass = ''; //add class for done text
         disabledLock = 'fa fa-lock'; //add class for lock
       }
     } else {
-      //var checkComplete = false; //add checkmark
       completedTaskClass = ''; //add class for done text
       
       if(this.state.completed === false && this.state.disabled === false){
@@ -408,7 +405,7 @@ export class SingleItem extends React.Component {
     return (
       <div key={this.props.id} className={"segment " + (this.props.group)}>
         <label className={"labelContainer disabledItem " + completedTaskClass } id={"labelID" + this.props.id}>{this.props.task}
-          <input type="checkbox" checked={this.state.checkComplete} keyprop={this.props.id} id={"itemID" + this.props.id} value={this.props.id} onChange={this.toggleComplete} disabled={this.state.disabled}/>
+          <input type="checkbox" keyprop={this.props.id} id={"itemID" + this.props.id} value={this.props.id} onChange={this.toggleComplete} disabled={this.state.disabled}/>
           
           <span id={"spanID" + this.props.id} className={"checkmark checkmark-outline disabledCheckbox disabledLock " + disabledLock} aria-hidden="true"/>
         </label>

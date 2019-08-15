@@ -1,0 +1,202 @@
+.App {
+  text-align: left;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #000;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.listwrap .checklist {
+  list-style: none;
+  padding-inline-start: 0px;
+}
+
+.listwrap .doneTextStyle {
+  text-decoration: line-through;
+}
+
+/* Customize the label (the container) */
+.listwrap .labelContainer {
+  display: block;
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.listwrap .labelContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.listwrap .checkmark {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+}
+
+.listwrap .checkmark-outline {
+  outline: 1px solid #989898;
+  outline-offset: 4px;
+}
+
+.listwrap .fa-lock{
+  outline: unset !important;
+}
+
+/* When the checkbox is checked, add a green background */
+.listwrap .labelContainer input:checked ~ .checkmark {
+  background-color: #68eca1;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.listwrap .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.listwrap .labelContainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.listwrap .labelContainer .checkmark:after {
+  display: none;
+}
+
+.listwrap {
+  margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 30px !important;
+}
+
+.listwrap .listHeadingWrap {
+  display: inline-block;
+  padding-left: 0px !important;
+}
+
+.listwrap .listHeader {
+  float: left;
+}
+
+.listwrap .allGroupsBtn {
+  float: right;
+  text-transform: uppercase;
+  color: #00BCD4;
+  margin-bottom: 0px;
+  cursor: pointer;
+}
+
+.listwrap .segment {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #b7b7b7;
+}
+
+.listwrap .segment:first-child {
+  border-top: 1px solid #b7b7b7;
+}
+
+
+
+body {
+  background-color: #dedede !important;
+}
+
+.listwrap .hide-element {
+  display: none !important;
+}
+
+.listwrap .disabledItem {
+  color: gray;
+}
+
+.listwrap .disabledItemtrue .disabledCheckbox {
+  display: none;
+}
+
+.listwrap .disabledItemtrue .disabledLock {
+  outline: unset !important;
+}
+
+/* Glyphicons*/
+ @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+.listwrap .purchaseListWrap,
+.listwrap .airplaneListWrap {
+  cursor: pointer;
+}
+
+.listwrap span.fa.fa-caret-right {
+    position: relative;
+    top: 15px;
+    right: 10px;
+    font-size: 25px;
+    color: grey;
+}
+
+.listwrap .segmentLabelItem {
+  position: relative;
+  left: 10px;
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+
+.listwrap .segmentPitem {
+  text-transform: uppercase;
+  color: grey;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.listwrap .airplaneSegment {
+  border-top: unset !important;
+}
+
+
+
+

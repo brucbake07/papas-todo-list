@@ -30,3 +30,5 @@ This component is the overall wrap for Purchase items.
 ### SingleItem
 This component is the overall wrap for the individual list items. It comprises of HTML and logic for handing item states.
 
+### ListData
+This is just a file that contains the mock list data stored in an array. 

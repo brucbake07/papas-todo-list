@@ -351,10 +351,11 @@ export class SingleItem extends React.Component {
             let labelIdString = "labelID" + id;
             let labelSpan = document.getElementById(labelIdString); //getting the element's label
             labelSpan.classList.remove('disabledLock');
-
+            
             //set state
             this.setState(prevState => ({
               disabled: false,
+              completed: false,
             }));
 
           }

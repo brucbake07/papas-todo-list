@@ -21,7 +21,7 @@ This project is split into componets that handle the bulk of the logic.
 ### TaskListWrap
 This component is the overall wrap for the form. It comprises of HTML and logic for handling view states.
 
-### AirplanToDoList
+### AirplaneToDoList
 This component is the overall wrap for Build Airplane items.
 
 ### PurchasesToDoList
